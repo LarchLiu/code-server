@@ -33,6 +33,8 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # COPY deploy-container/myTool /home/coder/myTool
 
 # -----------
+RUN sudo curl -fsSL https://deb.nodesource.com/setup_14.x | sudo bash -
+RUN sudo apt-get install -y nodejs
 
 # Port
 ENV PORT=8080
