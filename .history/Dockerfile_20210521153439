@@ -33,8 +33,6 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # COPY deploy-container/myTool /home/coder/myTool
 
 # -----------
-COPY deploy-container/extensions /home/coder/extensions
-RUN code-server --install-extension /home/coder/extensions/xyz.local-history-1.8.1.vsix
 RUN sudo curl -fsSL https://deb.nodesource.com/setup_14.x | sudo bash -
 RUN sudo apt-get install -y nodejs
 
